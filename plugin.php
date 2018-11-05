@@ -43,6 +43,10 @@ class pluginCookieConsent extends Plugin {
 		global $L, $site;
 		$pluginPath = $this->htmlPath(). 'configurator-themes/';
 
+        echo "Echo 1";
+        echo $pluginPath;
+        echo $this->getValue('message');
+
 		$html  = '<div>';
 		$html .= '<label>'.$L->get('Enable plugin (Config save)').'</label>';
 		$html .= '<select name="enable">';
@@ -54,13 +58,13 @@ class pluginCookieConsent extends Plugin {
 		$html .= '<div' .($this->getValue('enable') ? '':' style="display:none"'). '>';
 		$html .= '<label for="theme">'.$L->get('Choose theme'). '</label>';
 
-	    $html .= '<div class="uk-margin">';
-		$html .= '<figure class="uk-thumbnail uk-margin-small-right"><img src="'.$pluginPath. 'dark-bottom.png" alt="dark-bottom" style="width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Dark Bottom'). '</figcaption></figure></li>';
-		$html .= '<figure class="uk-thumbnail uk-margin-small-right"><img src="'.$pluginPath. 'dark-floating.png" alt="dark-floating" style="width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Dark Floating'). '</figcaption></figure></li>';
-		$html .= '<figure class="uk-thumbnail uk-margin-small-right"><img src="'.$pluginPath. 'dark-top.png" alt="dark-top" style="width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Dark Top'). '</figcaption></figure></li>';
-		$html .= '<figure class="uk-thumbnail uk-margin-small-right"><img src="'.$pluginPath. 'light-bottom.png" alt="light-bottom" style="width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Light Bottom'). '</figcaption></figure></li>';
-		$html .= '<figure class="uk-thumbnail uk-margin-small-right"><img src="'.$pluginPath. 'light-floating.png" alt="light-floating" style="width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Light Floating'). '</figcaption></figure></li>';
-		$html .= '<figure class="uk-thumbnail uk-margin-small-right"><img src="'.$pluginPath. 'light-top.png" alt="light-top" style="width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Light Top'). '</figcaption></figure></li>';
+	    $html .= '<div class="d-flex flex-wrap">';
+		$html .= '<figure style="margin-right:10px"><img src="'.$pluginPath. 'dark-bottom.png" alt="dark-bottom" style="border: solid 1px #212529;width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Dark Bottom'). '</figcaption></figure>';
+		$html .= '<figure style="margin-right:10px"><img src="'.$pluginPath. 'dark-floating.png" alt="dark-floating" style="border: solid 1px #212529;width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Dark Floating'). '</figcaption></figure>';
+		$html .= '<figure style="margin-right:10px"><img src="'.$pluginPath. 'dark-top.png" alt="dark-top" style="border: solid 1px #212529;width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Dark Top'). '</figcaption></figure>';
+		$html .= '<figure style="margin-right:10px"><img src="'.$pluginPath. 'light-bottom.png" alt="light-bottom" style="border: solid 1px #212529;width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Light Bottom'). '</figcaption></figure>';
+		$html .= '<figure style="margin-right:10px"><img src="'.$pluginPath. 'light-floating.png" alt="light-floating" style="border: solid 1px #212529;width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Light Floating'). '</figcaption></figure>';
+		$html .= '<figure style="margin-right:10px"><img src="'.$pluginPath. 'light-top.png" alt="light-top" style="border: solid 1px #212529;width:150px" /> <figcaption class="uk-thumbnail-caption">' .$L->get('Light Top'). '</figcaption></figure>';
 		$html .= '</div>';
 
 	    $html .= '<select name="theme">';
