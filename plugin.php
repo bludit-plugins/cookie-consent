@@ -14,7 +14,7 @@ class pluginCookieConsent extends Plugin {
 	// Plugin datas
 	public function init()
 	{
-		$this->getValue = array(
+		$this->dbFields = array(
 			'enable' => true,
 			'message' => 'Ce site utilise des cookies, notamment pour les statistiques de visites. Le fait de continuer à naviguer implique votre accord tacite.',
 			'dismiss' => 'Fermer l’avertissement',
