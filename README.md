@@ -13,5 +13,5 @@ Versions
 - Fix
 - Modification CSS theme examples
 
-Original plugin by Frédéric K.
+Original plugin by Frédéric K.<br>
 Updates by Clickwork
