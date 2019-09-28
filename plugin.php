@@ -132,7 +132,7 @@ class pluginCookieConsent extends Plugin {
 			$html .= 'window.cookieconsent_options = {"message":"'.$this->getValue('message').'","dismiss":"'.$this->getValue('dismiss').'","learnMore":"'.$this->getValue('learnMore').'","link":"'.$this->getValue('link').'","theme":"'.$this->getValue('theme').'"};'.PHP_EOL;
 			$html .= '</script>'.PHP_EOL;
 
-			$html .= '<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>'.PHP_EOL;
+			$html .= '<script type="text/javascript" src="'.$pluginPath.'cookieconsent.latest.min.js"></script>'.PHP_EOL;
 			$html .= '<!-- End Cookie Consent plugin -->'.PHP_EOL;
 		}
 		// For AdBlock Detect
